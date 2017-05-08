@@ -38,22 +38,42 @@
             </objects>
             <point key="canvasLocation" x="574" y="483"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Lista de Produtos-->
         <scene sceneID="BIW-Oh-Gli">
             <objects>
-                <tableViewController id="WsM-rU-hy9" sceneMemberID="viewController">
+                <tableViewController id="WsM-rU-hy9" customClass="ListaProdutosTableViewController" customModule="CompraLeve" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="hQG-cQ-TSc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="0lK-9e-ZnJ">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="produtoCell" id="0lK-9e-ZnJ" customClass="ListaProdutosTableViewCell" customModule="CompraLeve" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0lK-9e-ZnJ" id="j7b-7u-WRm">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSF-tP-O4d">
+                                            <rect key="frame" x="8" y="8" width="102" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Preco" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ed-IK-vYa">
+                                            <rect key="frame" x="308" y="8" width="45" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nomeLabel" destination="QSF-tP-O4d" id="Gmv-jU-xB4"/>
+                                    <outlet property="precoLabel" destination="6ed-IK-vYa" id="Kce-Ls-N9J"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -61,7 +81,7 @@
                             <outlet property="delegate" destination="WsM-rU-hy9" id="0pl-c2-KvL"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="FLK-Zp-szp">
+                    <navigationItem key="navigationItem" title="Lista de Produtos" id="FLK-Zp-szp">
                         <barButtonItem key="rightBarButtonItem" title="Ok" id="qi8-UV-gbt">
                             <connections>
                                 <segue destination="VPG-cv-NKa" kind="show" id="mgf-ih-Jjo"/>
@@ -220,11 +240,11 @@
             </objects>
             <point key="canvasLocation" x="-375" y="113"/>
         </scene>
-        <!--Item-->
+        <!--Lista de Produtos-->
         <scene sceneID="wOG-kE-gjs">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BSq-Kf-Dzh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="yS1-DL-W5h"/>
+                    <tabBarItem key="tabBarItem" title="Lista de Produtos" id="yS1-DL-W5h"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rI4-H6-RDm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

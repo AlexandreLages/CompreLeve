@@ -13,10 +13,11 @@
 		3F4E80841EC08EAD002C2D04 /* CompraLeve.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F4E80821EC08EAD002C2D04 /* CompraLeve.xcdatamodeld */; };
 		3F4E80861EC08EAD002C2D04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F4E80851EC08EAD002C2D04 /* Assets.xcassets */; };
 		3F4E80891EC08EAD002C2D04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F4E80871EC08EAD002C2D04 /* LaunchScreen.storyboard */; };
+		3F4E80911EC0AAF6002C2D04 /* ListaProdutosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4E80901EC0AAF6002C2D04 /* ListaProdutosTableViewController.swift */; };
+		3F4E80931EC0AB0A002C2D04 /* ListaProdutosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4E80921EC0AB0A002C2D04 /* ListaProdutosTableViewCell.swift */; };
 		3F9FBC4C1EC0971200277B06 /* Recibo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9FBC481EC0971200277B06 /* Recibo+CoreDataClass.swift */; };
 		3F9FBC4D1EC0971200277B06 /* Recibo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9FBC491EC0971200277B06 /* Recibo+CoreDataProperties.swift */; };
-		3F9FBC4E1EC0971200277B06 /* Produto+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9FBC4A1EC0971200277B06 /* Produto+CoreDataClass.swift */; };
-		3F9FBC4F1EC0971200277B06 /* Produto+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9FBC4B1EC0971200277B06 /* Produto+CoreDataProperties.swift */; };
+		3F9FBC4E1EC0971200277B06 /* Produto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9FBC4A1EC0971200277B06 /* Produto.swift */; };
 		3F9FBC521EC0979B00277B06 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9FBC511EC0979B00277B06 /* CoreDataManager.swift */; };
 		3F9FBC551EC09E9B00277B06 /* InformacoesPessoais+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9FBC531EC09E9B00277B06 /* InformacoesPessoais+CoreDataClass.swift */; };
 		3F9FBC561EC09E9B00277B06 /* InformacoesPessoais+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9FBC541EC09E9B00277B06 /* InformacoesPessoais+CoreDataProperties.swift */; };
@@ -32,10 +33,11 @@
 		3F4E80851EC08EAD002C2D04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F4E80881EC08EAD002C2D04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F4E808A1EC08EAD002C2D04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F4E80901EC0AAF6002C2D04 /* ListaProdutosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListaProdutosTableViewController.swift; sourceTree = "<group>"; };
+		3F4E80921EC0AB0A002C2D04 /* ListaProdutosTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListaProdutosTableViewCell.swift; sourceTree = "<group>"; };
 		3F9FBC481EC0971200277B06 /* Recibo+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Recibo+CoreDataClass.swift"; sourceTree = "<group>"; };
 		3F9FBC491EC0971200277B06 /* Recibo+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Recibo+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		3F9FBC4A1EC0971200277B06 /* Produto+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Produto+CoreDataClass.swift"; sourceTree = "<group>"; };
-		3F9FBC4B1EC0971200277B06 /* Produto+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Produto+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3F9FBC4A1EC0971200277B06 /* Produto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Produto.swift; sourceTree = "<group>"; };
 		3F9FBC511EC0979B00277B06 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		3F9FBC531EC09E9B00277B06 /* InformacoesPessoais+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "InformacoesPessoais+CoreDataClass.swift"; sourceTree = "<group>"; };
 		3F9FBC541EC09E9B00277B06 /* InformacoesPessoais+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "InformacoesPessoais+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -76,8 +78,7 @@
 				3F9FBC541EC09E9B00277B06 /* InformacoesPessoais+CoreDataProperties.swift */,
 				3F9FBC481EC0971200277B06 /* Recibo+CoreDataClass.swift */,
 				3F9FBC491EC0971200277B06 /* Recibo+CoreDataProperties.swift */,
-				3F9FBC4A1EC0971200277B06 /* Produto+CoreDataClass.swift */,
-				3F9FBC4B1EC0971200277B06 /* Produto+CoreDataProperties.swift */,
+				3F9FBC4A1EC0971200277B06 /* Produto.swift */,
 				3F9FBC501EC0973600277B06 /* Supporting Files */,
 				3F4E807D1EC08EAD002C2D04 /* ViewController.swift */,
 				3F4E807F1EC08EAD002C2D04 /* Main.storyboard */,
@@ -85,6 +86,8 @@
 				3F4E80821EC08EAD002C2D04 /* CompraLeve.xcdatamodeld */,
 				3F9FBC511EC0979B00277B06 /* CoreDataManager.swift */,
 				3F9FBC571EC09F9500277B06 /* InformacoesPessoaisDAO.swift */,
+				3F4E80901EC0AAF6002C2D04 /* ListaProdutosTableViewController.swift */,
+				3F4E80921EC0AB0A002C2D04 /* ListaProdutosTableViewCell.swift */,
 			);
 			path = CompraLeve;
 			sourceTree = "<group>";
@@ -172,12 +175,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F4E807E1EC08EAD002C2D04 /* ViewController.swift in Sources */,
-				3F9FBC4E1EC0971200277B06 /* Produto+CoreDataClass.swift in Sources */,
+				3F9FBC4E1EC0971200277B06 /* Produto.swift in Sources */,
 				3F9FBC581EC09F9500277B06 /* InformacoesPessoaisDAO.swift in Sources */,
 				3F9FBC4D1EC0971200277B06 /* Recibo+CoreDataProperties.swift in Sources */,
 				3F9FBC561EC09E9B00277B06 /* InformacoesPessoais+CoreDataProperties.swift in Sources */,
+				3F4E80911EC0AAF6002C2D04 /* ListaProdutosTableViewController.swift in Sources */,
+				3F4E80931EC0AB0A002C2D04 /* ListaProdutosTableViewCell.swift in Sources */,
 				3F9FBC4C1EC0971200277B06 /* Recibo+CoreDataClass.swift in Sources */,
-				3F9FBC4F1EC0971200277B06 /* Produto+CoreDataProperties.swift in Sources */,
 				3F4E807C1EC08EAD002C2D04 /* AppDelegate.swift in Sources */,
 				3F9FBC521EC0979B00277B06 /* CoreDataManager.swift in Sources */,
 				3F4E80841EC08EAD002C2D04 /* CompraLeve.xcdatamodeld in Sources */,

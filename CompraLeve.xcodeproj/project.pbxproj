@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05390830764427BA7C7E2CB7 /* Pods_CompraLeve.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CEC3D44963950EA3EE89FBC /* Pods_CompraLeve.framework */; };
 		3F4E807C1EC08EAD002C2D04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4E807B1EC08EAD002C2D04 /* AppDelegate.swift */; };
 		3F4E807E1EC08EAD002C2D04 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4E807D1EC08EAD002C2D04 /* ViewController.swift */; };
 		3F4E80811EC08EAD002C2D04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F4E807F1EC08EAD002C2D04 /* Main.storyboard */; };
@@ -22,9 +23,12 @@
 		3F9FBC551EC09E9B00277B06 /* InformacoesPessoais+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9FBC531EC09E9B00277B06 /* InformacoesPessoais+CoreDataClass.swift */; };
 		3F9FBC561EC09E9B00277B06 /* InformacoesPessoais+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9FBC541EC09E9B00277B06 /* InformacoesPessoais+CoreDataProperties.swift */; };
 		3F9FBC581EC09F9500277B06 /* InformacoesPessoaisDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9FBC571EC09F9500277B06 /* InformacoesPessoaisDAO.swift */; };
+		3FB9C4F51EC0B750002FB31F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FB9C4F41EC0B750002FB31F /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0CEC3D44963950EA3EE89FBC /* Pods_CompraLeve.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CompraLeve.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		26267CBEC3A618A300FCD01B /* Pods-CompraLeve.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CompraLeve.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CompraLeve/Pods-CompraLeve.debug.xcconfig"; sourceTree = "<group>"; };
 		3F4E80781EC08EAD002C2D04 /* CompraLeve.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CompraLeve.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F4E807B1EC08EAD002C2D04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F4E807D1EC08EAD002C2D04 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -42,6 +46,8 @@
 		3F9FBC531EC09E9B00277B06 /* InformacoesPessoais+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "InformacoesPessoais+CoreDataClass.swift"; sourceTree = "<group>"; };
 		3F9FBC541EC09E9B00277B06 /* InformacoesPessoais+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "InformacoesPessoais+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3F9FBC571EC09F9500277B06 /* InformacoesPessoaisDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformacoesPessoaisDAO.swift; sourceTree = "<group>"; };
+		3FB9C4F41EC0B750002FB31F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D03C46BE1067F4F691773027 /* Pods-CompraLeve.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CompraLeve.release.xcconfig"; path = "Pods/Target Support Files/Pods-CompraLeve/Pods-CompraLeve.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05390830764427BA7C7E2CB7 /* Pods_CompraLeve.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +67,8 @@
 			children = (
 				3F4E807A1EC08EAD002C2D04 /* CompraLeve */,
 				3F4E80791EC08EAD002C2D04 /* Products */,
+				6D7F0FDB97CB248D236A7ED5 /* Pods */,
+				A5512635644CF0A725C2ECF2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +83,7 @@
 		3F4E807A1EC08EAD002C2D04 /* CompraLeve */ = {
 			isa = PBXGroup;
 			children = (
+				3FB9C4F41EC0B750002FB31F /* GoogleService-Info.plist */,
 				3F9FBC531EC09E9B00277B06 /* InformacoesPessoais+CoreDataClass.swift */,
 				3F9FBC541EC09E9B00277B06 /* InformacoesPessoais+CoreDataProperties.swift */,
 				3F9FBC481EC0971200277B06 /* Recibo+CoreDataClass.swift */,
@@ -102,6 +112,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		6D7F0FDB97CB248D236A7ED5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				26267CBEC3A618A300FCD01B /* Pods-CompraLeve.debug.xcconfig */,
+				D03C46BE1067F4F691773027 /* Pods-CompraLeve.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A5512635644CF0A725C2ECF2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0CEC3D44963950EA3EE89FBC /* Pods_CompraLeve.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -109,9 +136,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3F4E808D1EC08EAD002C2D04 /* Build configuration list for PBXNativeTarget "CompraLeve" */;
 			buildPhases = (
+				51FCF94A24BA2BD29A832B85 /* [CP] Check Pods Manifest.lock */,
 				3F4E80741EC08EAD002C2D04 /* Sources */,
 				3F4E80751EC08EAD002C2D04 /* Frameworks */,
 				3F4E80761EC08EAD002C2D04 /* Resources */,
+				F65CBAF34FD6000D5897B172 /* [CP] Embed Pods Frameworks */,
+				78BB214916FC33C998089DBC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -162,12 +192,61 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F4E80891EC08EAD002C2D04 /* LaunchScreen.storyboard in Resources */,
+				3FB9C4F51EC0B750002FB31F /* GoogleService-Info.plist in Resources */,
 				3F4E80861EC08EAD002C2D04 /* Assets.xcassets in Resources */,
 				3F4E80811EC08EAD002C2D04 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		51FCF94A24BA2BD29A832B85 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		78BB214916FC33C998089DBC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CompraLeve/Pods-CompraLeve-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F65CBAF34FD6000D5897B172 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CompraLeve/Pods-CompraLeve-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3F4E80741EC08EAD002C2D04 /* Sources */ = {
@@ -306,10 +385,12 @@
 		};
 		3F4E808E1EC08EAD002C2D04 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26267CBEC3A618A300FCD01B /* Pods-CompraLeve.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CompraLeve/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wolves.CompraLeve;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -318,10 +399,12 @@
 		};
 		3F4E808F1EC08EAD002C2D04 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D03C46BE1067F4F691773027 /* Pods-CompraLeve.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CompraLeve/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wolves.CompraLeve;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;

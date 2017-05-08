@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ListaProdutosTableViewController: UITableViewController {
     var produtos = [Produto]()
@@ -19,6 +20,8 @@ class ListaProdutosTableViewController: UITableViewController {
         self.produtos.append(p)
         self.produtos.append(p)
         self.produtos.append(p)
+        
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

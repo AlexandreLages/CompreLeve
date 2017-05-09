@@ -13,8 +13,8 @@ public class InformacoesPessoais: NSManagedObject {
 
     convenience init() {
         let context = CoreDataManager.compraLeveContext
-        let entity = NSEntityDescription.entity(forEntityName: "InformacoesPessoais", in: context)
+        let entity = NSEntityDescription.entity(forEntityName: "InformacoesPessoais", in: context)!
         
-        self.init(entity: entity!, insertInto: context)
+        self.init(entity: entity, insertInto: context)
     }
 }

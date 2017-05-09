@@ -10,12 +10,12 @@ import Foundation
 import CoreData
 
 class InformacoesPessoaisDAO {
-    static func insert(filme: InformacoesPessoais) -> Bool {
-        return CoreDataManager.insert(filme)
+    static func insert(informacaoPessoal: InformacoesPessoais) -> Bool {
+        return CoreDataManager.insert(informacaoPessoal)
     }
     
-    static func delete(filme: InformacoesPessoais) -> Bool {
-        return CoreDataManager.delete(filme)
+    static func delete(informacaoPessoal: InformacoesPessoais) -> Bool {
+        return CoreDataManager.delete(informacaoPessoal)
     }
     
     static func getInformacoesPessoais() -> [InformacoesPessoais] {

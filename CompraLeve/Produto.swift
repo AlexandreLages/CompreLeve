@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import FirebaseDatabase
+import Firebase
 
 public class Produto {
     let nome: String
@@ -14,12 +16,27 @@ public class Produto {
     let categoria: Int
     let unidadeDeMedida:Int
     let descricao:String
+    let key: String
+    let ref: FIRDatabaseReference?
     
-    init(nome: String, preco:Double, categoria:Int, unidadeDeMedida:Int, descricao:String) {
+    init(nome: String, preco:Double, categoria:Int, unidadeDeMedida:Int, descricao:String, key: String = "") {
         self.nome = nome
         self.preco = preco
         self.categoria = categoria
         self.unidadeDeMedida = unidadeDeMedida
         self.descricao = descricao
+        self.key = key
+        self.ref = nil
+    }
+    
+    init(snapshot: FIRDataSnapshot) {
+        key = snapshot.key
+        let snapshotValue = snapshot.value as! [String: AnyObject]
+        nome = snapshotValue["nome"] as! String
+        preco = snapshotValue["preco"] as! Double
+        categoria = snapshotValue["categoria"] as! Int
+        unidadeDeMedida = snapshotValue["unidadeDeMedida"] as! Int
+        descricao = snapshotValue["descricao"] as! String
+        ref = snapshot.ref
     }
 }

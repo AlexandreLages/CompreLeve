@@ -8,19 +8,29 @@
 
 import UIKit
 import Firebase
+import FirebaseDatabase
 
 class ListaProdutosTableViewController: UITableViewController {
     var produtos = [Produto]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let p = Produto(nome:"test", preco:10.2, categoria:1, unidadeDeMedida:1, descricao:"desc")
-        self.produtos.append(p)
-        self.produtos.append(p)
-        self.produtos.append(p)
-        self.produtos.append(p)
-        self.produtos.append(p)
-        
+        let ref = FIRDatabase.database().reference(withPath: "produtos")
+        ref.observe(.value, with: { snapshot in
+            // 2
+            var newProducts: [Produto] = []
+            
+            // 3
+            for item in snapshot.children {
+                // 4
+                let productItem = Produto(snapshot: item as! FIRDataSnapshot)
+                newProducts.append(productItem)
+            }
+            
+            // 5
+            self.produtos = newProducts
+            self.tableView.reloadData()
+        })
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

@@ -45,4 +45,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Saves changes in the application's managed object context before the application terminates.
         CoreDataManager.saveContext()
     }
+    
+    func applicationDidFinishLaunching(_ application: UIApplication) {
+        FIRApp.configure()
+    }
 }

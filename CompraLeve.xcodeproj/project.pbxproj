@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		05390830764427BA7C7E2CB7 /* Pods_CompraLeve.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CEC3D44963950EA3EE89FBC /* Pods_CompraLeve.framework */; };
+		3F1E66A71EC1FF0400D56563 /* ProdutosSelecionadoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E66A61EC1FF0400D56563 /* ProdutosSelecionadoTableViewController.swift */; };
+		3F1E66AB1EC2003100D56563 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E66AA1EC2003100D56563 /* Item.swift */; };
+		3F1E66AD1EC20BF300D56563 /* ProdutosSelecionadosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E66AC1EC20BF300D56563 /* ProdutosSelecionadosTableViewCell.swift */; };
 		3F2CCC7A1EC1E6CA000DF927 /* InformacaoPessoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2CCC791EC1E6CA000DF927 /* InformacaoPessoalViewController.swift */; };
 		3F2CCC7C1EC1EFDF000DF927 /* InformacoesPessoaisTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2CCC7B1EC1EFDF000DF927 /* InformacoesPessoaisTableViewController.swift */; };
 		3F2CCC7E1EC1F0B8000DF927 /* InformacaoPessoalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2CCC7D1EC1F0B8000DF927 /* InformacaoPessoalTableViewCell.swift */; };
@@ -32,6 +35,9 @@
 /* Begin PBXFileReference section */
 		0CEC3D44963950EA3EE89FBC /* Pods_CompraLeve.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CompraLeve.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		26267CBEC3A618A300FCD01B /* Pods-CompraLeve.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CompraLeve.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CompraLeve/Pods-CompraLeve.debug.xcconfig"; sourceTree = "<group>"; };
+		3F1E66A61EC1FF0400D56563 /* ProdutosSelecionadoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProdutosSelecionadoTableViewController.swift; sourceTree = "<group>"; };
+		3F1E66AA1EC2003100D56563 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		3F1E66AC1EC20BF300D56563 /* ProdutosSelecionadosTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProdutosSelecionadosTableViewCell.swift; sourceTree = "<group>"; };
 		3F2CCC791EC1E6CA000DF927 /* InformacaoPessoalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformacaoPessoalViewController.swift; sourceTree = "<group>"; };
 		3F2CCC7B1EC1EFDF000DF927 /* InformacoesPessoaisTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformacoesPessoaisTableViewController.swift; sourceTree = "<group>"; };
 		3F2CCC7D1EC1F0B8000DF927 /* InformacaoPessoalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformacaoPessoalTableViewCell.swift; sourceTree = "<group>"; };
@@ -103,10 +109,13 @@
 				3F4E80821EC08EAD002C2D04 /* CompraLeve.xcdatamodeld */,
 				3F9FBC511EC0979B00277B06 /* CoreDataManager.swift */,
 				3F9FBC571EC09F9500277B06 /* InformacoesPessoaisDAO.swift */,
+				3F1E66AA1EC2003100D56563 /* Item.swift */,
 				3F4E80901EC0AAF6002C2D04 /* ListaProdutosTableViewController.swift */,
 				3F4E80921EC0AB0A002C2D04 /* ListaProdutosTableViewCell.swift */,
 				3F2CCC7B1EC1EFDF000DF927 /* InformacoesPessoaisTableViewController.swift */,
 				3F2CCC7D1EC1F0B8000DF927 /* InformacaoPessoalTableViewCell.swift */,
+				3F1E66A61EC1FF0400D56563 /* ProdutosSelecionadoTableViewController.swift */,
+				3F1E66AC1EC20BF300D56563 /* ProdutosSelecionadosTableViewCell.swift */,
 			);
 			path = CompraLeve;
 			sourceTree = "<group>";
@@ -264,8 +273,10 @@
 			files = (
 				3F4E807E1EC08EAD002C2D04 /* ViewController.swift in Sources */,
 				3F9FBC4E1EC0971200277B06 /* Produto.swift in Sources */,
+				3F1E66AB1EC2003100D56563 /* Item.swift in Sources */,
 				3F9FBC581EC09F9500277B06 /* InformacoesPessoaisDAO.swift in Sources */,
 				3F9FBC4D1EC0971200277B06 /* Recibo+CoreDataProperties.swift in Sources */,
+				3F1E66A71EC1FF0400D56563 /* ProdutosSelecionadoTableViewController.swift in Sources */,
 				3F9FBC561EC09E9B00277B06 /* InformacoesPessoais+CoreDataProperties.swift in Sources */,
 				3F2CCC7C1EC1EFDF000DF927 /* InformacoesPessoaisTableViewController.swift in Sources */,
 				3F4E80911EC0AAF6002C2D04 /* ListaProdutosTableViewController.swift in Sources */,
@@ -274,6 +285,7 @@
 				3F9FBC4C1EC0971200277B06 /* Recibo+CoreDataClass.swift in Sources */,
 				3F2CCC7E1EC1F0B8000DF927 /* InformacaoPessoalTableViewCell.swift in Sources */,
 				3F4E807C1EC08EAD002C2D04 /* AppDelegate.swift in Sources */,
+				3F1E66AD1EC20BF300D56563 /* ProdutosSelecionadosTableViewCell.swift in Sources */,
 				3F9FBC521EC0979B00277B06 /* CoreDataManager.swift in Sources */,
 				3F4E80841EC08EAD002C2D04 /* CompraLeve.xcdatamodeld in Sources */,
 				3F9FBC551EC09E9B00277B06 /* InformacoesPessoais+CoreDataClass.swift in Sources */,

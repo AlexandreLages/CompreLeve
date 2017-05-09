@@ -1,39 +1,22 @@
 //
-//  ListaProdutosTableViewController.swift
+//  ProdutosSelecionadoTableViewController.swift
 //  CompraLeve
 //
-//  Created by Student on 5/8/17.
+//  Created by Student on 5/9/17.
 //  Copyright © 2017 Wolves. All rights reserved.
 //
 
 import UIKit
-import Firebase
-import FirebaseDatabase
 
-class ListaProdutosTableViewController: UITableViewController {
-    var produtos = [Produto]()
-    static var itens = [Item]()
+class ProdutosSelecionadoTableViewController: UITableViewController {
     
     
+    var itens = [Item]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        let ref = FIRDatabase.database().reference(withPath: "produtos")
-        ref.observe(.value, with: { snapshot in
-            // 2
-            var newProducts: [Produto] = []
-            
-            // 3
-            for item in snapshot.children {
-                // 4
-                let productItem = Produto(snapshot: item as! FIRDataSnapshot)
-                newProducts.append(productItem)
-            }
-            
-            // 5
-            self.produtos = newProducts
-            self.tableView.reloadData()
-        })
-        
+        self.itens = ListaProdutosTableViewController.itens
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -55,26 +38,23 @@ class ListaProdutosTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return self.produtos.count
+        return self.itens.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "produtoCell", for: indexPath)
-
-        let produto: Produto
-        produto = produtos[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "itemCell", for: indexPath)
         
-        if let produtoCell = cell as? ListaProdutosTableViewCell {
-            produtoCell.nomeLabel.text = produto.nome
-            produtoCell.precoLabel.text = String(produto.preco)
-            produtoCell.qntLabel.text = String(0)
-            produtoCell.produto = produto
+        let item: Item
+        item = itens[indexPath.row]
+        
+        if let itemCell = cell as? ProdutosSelecionadosTableViewCell {
+            itemCell.nomeProdutoLabel.text = item.produto.nome
+            itemCell.quantidadeLabel.text = String(item.quantidade)
         }
         
         
         return cell
     }
-    
 
     /*
     // Override to support conditional editing of the table view.
@@ -111,9 +91,14 @@ class ListaProdutosTableViewController: UITableViewController {
     }
     */
 
-    
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
 
 }

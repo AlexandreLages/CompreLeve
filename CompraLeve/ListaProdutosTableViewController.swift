@@ -9,18 +9,29 @@
 import UIKit
 import Firebase
 import FirebaseDatabase
+import ActionSheetPicker_3_0
 
 class ListaProdutosTableViewController: UITableViewController {
     var produtos = [Produto]()
     static var itens = [Item]()
     
+    @IBOutlet weak var secaoButton: UIButton!
+
     @IBOutlet weak var loadingView: UIActivityIndicatorView!
-    
-    @IBOutlet weak var secoesPickerView: UIPickerView!
-    
+    @IBAction func secaoButtonTouched(_ sender: Any) {
+        ActionSheetStringPicker.show(withTitle: "Multiple String Picker", rows: ["Todos", "Limpeza", "Descartaveis"], initialSelection: 0, doneBlock: {
+                picker, indexes, values in
+                
+                print("values = \(values)")
+                print("indexes = \(indexes)")
+                print("picker = \(picker)")
+                return
+        }, cancel: { ActionMultipleStringCancelBlock in return }, origin: sender)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         self.loadingView.startAnimating()
+        
         let ref = FIRDatabase.database().reference(withPath: "produtos")
         ref.observe(.value, with: { snapshot in
             // 2

@@ -6,6 +6,7 @@ target 'CompraLeve' do
   use_frameworks!
 	pod 'Firebase/Core'
     pod 'Firebase/Database'
+    pod 'ActionSheetPicker-3.0'
   # Pods for CompraLeve
 
 end

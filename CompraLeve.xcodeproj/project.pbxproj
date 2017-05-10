@@ -29,6 +29,8 @@
 		3F9FBC551EC09E9B00277B06 /* InformacoesPessoais+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9FBC531EC09E9B00277B06 /* InformacoesPessoais+CoreDataClass.swift */; };
 		3F9FBC561EC09E9B00277B06 /* InformacoesPessoais+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9FBC541EC09E9B00277B06 /* InformacoesPessoais+CoreDataProperties.swift */; };
 		3F9FBC581EC09F9500277B06 /* InformacoesPessoaisDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9FBC571EC09F9500277B06 /* InformacoesPessoaisDAO.swift */; };
+		3FB579791EC3396E009452E0 /* RecibosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB579781EC3396E009452E0 /* RecibosTableViewController.swift */; };
+		3FB5797B1EC3397D009452E0 /* RecibosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5797A1EC3397D009452E0 /* RecibosTableViewCell.swift */; };
 		3FB9C4F51EC0B750002FB31F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FB9C4F41EC0B750002FB31F /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +60,8 @@
 		3F9FBC531EC09E9B00277B06 /* InformacoesPessoais+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "InformacoesPessoais+CoreDataClass.swift"; sourceTree = "<group>"; };
 		3F9FBC541EC09E9B00277B06 /* InformacoesPessoais+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "InformacoesPessoais+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3F9FBC571EC09F9500277B06 /* InformacoesPessoaisDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformacoesPessoaisDAO.swift; sourceTree = "<group>"; };
+		3FB579781EC3396E009452E0 /* RecibosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecibosTableViewController.swift; sourceTree = "<group>"; };
+		3FB5797A1EC3397D009452E0 /* RecibosTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecibosTableViewCell.swift; sourceTree = "<group>"; };
 		3FB9C4F41EC0B750002FB31F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D03C46BE1067F4F691773027 /* Pods-CompraLeve.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CompraLeve.release.xcconfig"; path = "Pods/Target Support Files/Pods-CompraLeve/Pods-CompraLeve.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,6 +120,8 @@
 				3F2CCC7D1EC1F0B8000DF927 /* InformacaoPessoalTableViewCell.swift */,
 				3F1E66A61EC1FF0400D56563 /* ProdutosSelecionadoTableViewController.swift */,
 				3F1E66AC1EC20BF300D56563 /* ProdutosSelecionadosTableViewCell.swift */,
+				3FB579781EC3396E009452E0 /* RecibosTableViewController.swift */,
+				3FB5797A1EC3397D009452E0 /* RecibosTableViewCell.swift */,
 			);
 			path = CompraLeve;
 			sourceTree = "<group>";
@@ -282,6 +288,7 @@
 				3F4E80911EC0AAF6002C2D04 /* ListaProdutosTableViewController.swift in Sources */,
 				3F4E80931EC0AB0A002C2D04 /* ListaProdutosTableViewCell.swift in Sources */,
 				3F2CCC7A1EC1E6CA000DF927 /* InformacaoPessoalViewController.swift in Sources */,
+				3FB5797B1EC3397D009452E0 /* RecibosTableViewCell.swift in Sources */,
 				3F9FBC4C1EC0971200277B06 /* Recibo+CoreDataClass.swift in Sources */,
 				3F2CCC7E1EC1F0B8000DF927 /* InformacaoPessoalTableViewCell.swift in Sources */,
 				3F4E807C1EC08EAD002C2D04 /* AppDelegate.swift in Sources */,
@@ -289,6 +296,7 @@
 				3F9FBC521EC0979B00277B06 /* CoreDataManager.swift in Sources */,
 				3F4E80841EC08EAD002C2D04 /* CompraLeve.xcdatamodeld in Sources */,
 				3F9FBC551EC09E9B00277B06 /* InformacoesPessoais+CoreDataClass.swift in Sources */,
+				3FB579791EC3396E009452E0 /* RecibosTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

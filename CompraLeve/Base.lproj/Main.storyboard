@@ -324,7 +324,7 @@
                                     <outlet property="numeroLabel" destination="udN-hT-zBR" id="w54-Aq-b85"/>
                                     <outlet property="rgLabel" destination="I74-Zh-1jZ" id="2l6-Fh-wRY"/>
                                     <outlet property="ruaLabel" destination="FU3-CN-oH8" id="TNf-OK-5oz"/>
-                                    <segue destination="zIk-70-AzY" kind="show" id="LeV-0L-pO6"/>
+                                    <segue destination="zIk-70-AzY" kind="show" identifier="compraSegue" id="LeV-0L-pO6"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -546,7 +546,7 @@
         <!--Title-->
         <scene sceneID="T1k-nk-iz9">
             <objects>
-                <viewController id="zIk-70-AzY" sceneMemberID="viewController">
+                <viewController id="zIk-70-AzY" customClass="FinalizarCompraViewController" customModule="CompraLeve" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zzT-uG-gik"/>
                         <viewControllerLayoutGuide type="bottom" id="Pt4-Xi-Y8M"/>

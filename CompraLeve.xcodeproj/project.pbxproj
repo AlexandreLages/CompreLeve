@@ -22,6 +22,7 @@
 		3F4E80891EC08EAD002C2D04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F4E80871EC08EAD002C2D04 /* LaunchScreen.storyboard */; };
 		3F4E80911EC0AAF6002C2D04 /* ListaProdutosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4E80901EC0AAF6002C2D04 /* ListaProdutosTableViewController.swift */; };
 		3F4E80931EC0AB0A002C2D04 /* ListaProdutosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4E80921EC0AB0A002C2D04 /* ListaProdutosTableViewCell.swift */; };
+		3F85594B1EC33BFA007D3B26 /* FinalizarCompraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F85594A1EC33BFA007D3B26 /* FinalizarCompraViewController.swift */; };
 		3F9FBC4C1EC0971200277B06 /* Recibo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9FBC481EC0971200277B06 /* Recibo+CoreDataClass.swift */; };
 		3F9FBC4D1EC0971200277B06 /* Recibo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9FBC491EC0971200277B06 /* Recibo+CoreDataProperties.swift */; };
 		3F9FBC4E1EC0971200277B06 /* Produto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9FBC4A1EC0971200277B06 /* Produto.swift */; };
@@ -53,6 +54,7 @@
 		3F4E808A1EC08EAD002C2D04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F4E80901EC0AAF6002C2D04 /* ListaProdutosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListaProdutosTableViewController.swift; sourceTree = "<group>"; };
 		3F4E80921EC0AB0A002C2D04 /* ListaProdutosTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListaProdutosTableViewCell.swift; sourceTree = "<group>"; };
+		3F85594A1EC33BFA007D3B26 /* FinalizarCompraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalizarCompraViewController.swift; sourceTree = "<group>"; };
 		3F9FBC481EC0971200277B06 /* Recibo+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Recibo+CoreDataClass.swift"; sourceTree = "<group>"; };
 		3F9FBC491EC0971200277B06 /* Recibo+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Recibo+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3F9FBC4A1EC0971200277B06 /* Produto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Produto.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				3F9FBC501EC0973600277B06 /* Supporting Files */,
 				3F4E807D1EC08EAD002C2D04 /* ViewController.swift */,
 				3F4E807F1EC08EAD002C2D04 /* Main.storyboard */,
+				3F85594A1EC33BFA007D3B26 /* FinalizarCompraViewController.swift */,
 				3F2CCC791EC1E6CA000DF927 /* InformacaoPessoalViewController.swift */,
 				3F4E80851EC08EAD002C2D04 /* Assets.xcassets */,
 				3F4E80821EC08EAD002C2D04 /* CompraLeve.xcdatamodeld */,
@@ -288,6 +291,7 @@
 				3F4E80911EC0AAF6002C2D04 /* ListaProdutosTableViewController.swift in Sources */,
 				3F4E80931EC0AB0A002C2D04 /* ListaProdutosTableViewCell.swift in Sources */,
 				3F2CCC7A1EC1E6CA000DF927 /* InformacaoPessoalViewController.swift in Sources */,
+				3F85594B1EC33BFA007D3B26 /* FinalizarCompraViewController.swift in Sources */,
 				3FB5797B1EC3397D009452E0 /* RecibosTableViewCell.swift in Sources */,
 				3F9FBC4C1EC0971200277B06 /* Recibo+CoreDataClass.swift in Sources */,
 				3F2CCC7E1EC1F0B8000DF927 /* InformacaoPessoalTableViewCell.swift in Sources */,

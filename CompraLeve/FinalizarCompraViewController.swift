@@ -23,6 +23,11 @@ class FinalizarCompraViewController: UIViewController {
         } else {
             print("Erro ao salvar recibo")
         }
+        ListaProdutosTableViewController.itens.removeAll()
+        //self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+        self.navigationController?.popToRootViewController(animated: true)
+        
+        
     }
     
     func transformarEmString(){

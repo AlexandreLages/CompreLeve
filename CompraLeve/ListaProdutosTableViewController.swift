@@ -49,6 +49,7 @@ class ListaProdutosTableViewController: UITableViewController {
             if(self.produtos.count > 0){
                 self.loadingView.stopAnimating()
             }
+            print("RECARREGANDO")
             self.tableView.reloadData()
         })
         
@@ -59,6 +60,13 @@ class ListaProdutosTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.viewDidLoad()
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -83,10 +91,21 @@ class ListaProdutosTableViewController: UITableViewController {
         produto = produtos[indexPath.row]
         
         if let produtoCell = cell as? ListaProdutosTableViewCell {
+            
+            produtoCell.qntLabel.text = String(0)
+            produtoCell.quantidade = 0
+            produtoCell.qntStepper.value = 0
+            for item in ListaProdutosTableViewController.itens{
+                if(item.produto.nome == produto.nome){
+                    produtoCell.qntLabel.text = String(item.quantidade)
+                    produtoCell.quantidade = item.quantidade
+                    produtoCell.qntStepper.value = Double(item.quantidade)
+                }
+            }
             produtoCell.nomeLabel.text = produto.nome
             produtoCell.precoLabel.text = String(produto.preco)
-            produtoCell.qntLabel.text = String(0)
             produtoCell.produto = produto
+            
         }
         
         

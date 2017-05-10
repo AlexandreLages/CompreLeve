@@ -66,6 +66,7 @@ class InformacaoPessoalViewController: UIViewController {
         
         if InformacoesPessoaisDAO.insert(informacaoPessoal: informacaoPessoal) {
             print("Informações salvas com sucesso")
+            self.navigationController?.popViewController(animated: true)
         } else {
             print("Deu merda")
         }

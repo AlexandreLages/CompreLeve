@@ -16,4 +16,7 @@ class InformacaoPessoalTableViewCell: UITableViewCell {
     @IBOutlet weak var ruaLabel: UILabel!
     @IBOutlet weak var bairroLabel: UILabel!
     @IBOutlet weak var numeroLabel: UILabel!
+    @IBOutlet weak var rgLabel: UILabel!
+    @IBOutlet weak var cpfLabel: UILabel!
+    @IBOutlet weak var complementoLabel: UILabel!
 }

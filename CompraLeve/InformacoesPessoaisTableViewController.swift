@@ -17,6 +17,11 @@ class InformacoesPessoaisTableViewController: UITableViewController {
         super.viewDidLoad()
         self.informacoesPessoais = InformacoesPessoaisDAO.getInformacoesPessoais()
     }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.informacoesPessoais = InformacoesPessoaisDAO.getInformacoesPessoais()
+        self.tableView.reloadData()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -43,8 +48,12 @@ class InformacoesPessoaisTableViewController: UITableViewController {
             informacaoPessoalCell.nomeLabel.text = informacaoPessoal.nome
             informacaoPessoalCell.celularLabel.text = informacaoPessoal.celular
             informacaoPessoalCell.ruaLabel.text = informacaoPessoal.rua
+            informacaoPessoalCell.bairroLabel.text = String (informacaoPessoal.bairro)
+            informacaoPessoalCell.numeroLabel.text = String (informacaoPessoal.numero)
+            informacaoPessoalCell.complementoLabel.text = informacaoPessoal.complemento
+            informacaoPessoalCell.cpfLabel.text = informacaoPessoal.cpf
+            informacaoPessoalCell.rgLabel.text = informacaoPessoal.rg
         }
-
         return cell
     }
 

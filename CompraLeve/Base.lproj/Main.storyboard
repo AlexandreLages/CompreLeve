@@ -573,11 +573,33 @@
                                 <state key="normal" title="Comprar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="finalizarCompraButton" destination="zIk-70-AzY" eventType="touchUpInside" id="tUt-AV-cnF"/>
+                                </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zLc-fQ-UoW">
+                                <rect key="frame" x="16" y="72" width="343" height="404"/>
+                                <color key="backgroundColor" red="0.98930612847261712" green="1" blue="0.48745264767229901" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="404" id="BIG-N0-eUi"/>
+                                    <constraint firstAttribute="width" constant="343" id="h3b-vq-CYo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zLc-fQ-UoW" firstAttribute="leading" secondItem="zp1-Nu-9yz" secondAttribute="leadingMargin" id="6hl-mL-3xV"/>
+                            <constraint firstItem="zLc-fQ-UoW" firstAttribute="top" secondItem="zzT-uG-gik" secondAttribute="bottom" constant="8" id="CDB-rX-kw0"/>
+                            <constraint firstItem="zLc-fQ-UoW" firstAttribute="trailing" secondItem="zp1-Nu-9yz" secondAttribute="trailingMargin" id="yQk-V2-Bdz"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="rIa-wp-kIf"/>
+                    <connections>
+                        <outlet property="reciboTextView" destination="zLc-fQ-UoW" id="9vn-yW-8zk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hAe-PY-RGH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

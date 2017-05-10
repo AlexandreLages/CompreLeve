@@ -23,6 +23,7 @@
 		3F4E80911EC0AAF6002C2D04 /* ListaProdutosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4E80901EC0AAF6002C2D04 /* ListaProdutosTableViewController.swift */; };
 		3F4E80931EC0AB0A002C2D04 /* ListaProdutosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4E80921EC0AB0A002C2D04 /* ListaProdutosTableViewCell.swift */; };
 		3F85594B1EC33BFA007D3B26 /* FinalizarCompraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F85594A1EC33BFA007D3B26 /* FinalizarCompraViewController.swift */; };
+		3F85594D1EC3481C007D3B26 /* ReciboDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F85594C1EC3481C007D3B26 /* ReciboDAO.swift */; };
 		3F9FBC4C1EC0971200277B06 /* Recibo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9FBC481EC0971200277B06 /* Recibo+CoreDataClass.swift */; };
 		3F9FBC4D1EC0971200277B06 /* Recibo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9FBC491EC0971200277B06 /* Recibo+CoreDataProperties.swift */; };
 		3F9FBC4E1EC0971200277B06 /* Produto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9FBC4A1EC0971200277B06 /* Produto.swift */; };
@@ -55,6 +56,7 @@
 		3F4E80901EC0AAF6002C2D04 /* ListaProdutosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListaProdutosTableViewController.swift; sourceTree = "<group>"; };
 		3F4E80921EC0AB0A002C2D04 /* ListaProdutosTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListaProdutosTableViewCell.swift; sourceTree = "<group>"; };
 		3F85594A1EC33BFA007D3B26 /* FinalizarCompraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalizarCompraViewController.swift; sourceTree = "<group>"; };
+		3F85594C1EC3481C007D3B26 /* ReciboDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReciboDAO.swift; sourceTree = "<group>"; };
 		3F9FBC481EC0971200277B06 /* Recibo+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Recibo+CoreDataClass.swift"; sourceTree = "<group>"; };
 		3F9FBC491EC0971200277B06 /* Recibo+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Recibo+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3F9FBC4A1EC0971200277B06 /* Produto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Produto.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				3F4E80821EC08EAD002C2D04 /* CompraLeve.xcdatamodeld */,
 				3F9FBC511EC0979B00277B06 /* CoreDataManager.swift */,
 				3F9FBC571EC09F9500277B06 /* InformacoesPessoaisDAO.swift */,
+				3F85594C1EC3481C007D3B26 /* ReciboDAO.swift */,
 				3F1E66AA1EC2003100D56563 /* Item.swift */,
 				3F4E80901EC0AAF6002C2D04 /* ListaProdutosTableViewController.swift */,
 				3F4E80921EC0AB0A002C2D04 /* ListaProdutosTableViewCell.swift */,
@@ -284,6 +287,7 @@
 				3F9FBC4E1EC0971200277B06 /* Produto.swift in Sources */,
 				3F1E66AB1EC2003100D56563 /* Item.swift in Sources */,
 				3F9FBC581EC09F9500277B06 /* InformacoesPessoaisDAO.swift in Sources */,
+				3F85594D1EC3481C007D3B26 /* ReciboDAO.swift in Sources */,
 				3F9FBC4D1EC0971200277B06 /* Recibo+CoreDataProperties.swift in Sources */,
 				3F1E66A71EC1FF0400D56563 /* ProdutosSelecionadoTableViewController.swift in Sources */,
 				3F9FBC561EC09E9B00277B06 /* InformacoesPessoais+CoreDataProperties.swift in Sources */,

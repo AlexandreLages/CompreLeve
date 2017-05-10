@@ -13,8 +13,10 @@ class ListaProdutosTableViewCell: UITableViewCell {
     @IBOutlet weak var nomeLabel: UILabel!
     @IBOutlet weak var precoLabel: UILabel!
     @IBOutlet weak var qntLabel: UILabel!
+    @IBOutlet weak var qntStepper: UIStepper!
     var produto: Produto? = nil
     var quantidade: Int = 0
+    
     
     @IBAction func defineQnt(_ sender: UIStepper) {
         for item in ListaProdutosTableViewController.itens{

@@ -508,7 +508,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BDg-Fc-BFM">
-                                <rect key="frame" x="16" y="384" width="343" height="30"/>
+                                <rect key="frame" x="16" y="522" width="343" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="0.77467672413793098" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="15"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -517,15 +517,24 @@
                                     <action selector="addButton" destination="0jl-cS-7TQ" eventType="touchUpInside" id="G9b-rG-Lta"/>
                                 </connections>
                             </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="dqK-VO-gfu">
+                                <rect key="frame" x="0.0" y="376" width="375" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="6Ea-iv-bPM"/>
+                                </constraints>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="dqK-VO-gfu" firstAttribute="leading" secondItem="iW0-HF-Lc2" secondAttribute="leading" id="0H4-3g-5KN"/>
+                            <constraint firstItem="BDg-Fc-BFM" firstAttribute="top" secondItem="dqK-VO-gfu" secondAttribute="bottom" constant="18" id="8wn-Qb-4R6"/>
                             <constraint firstItem="BDg-Fc-BFM" firstAttribute="leading" secondItem="iW0-HF-Lc2" secondAttribute="leadingMargin" id="GvD-Ld-RRS"/>
                             <constraint firstItem="e5W-qD-hdu" firstAttribute="top" secondItem="Ysc-VB-D3G" secondAttribute="bottom" constant="8" id="IjN-pd-gCM"/>
+                            <constraint firstAttribute="trailing" secondItem="dqK-VO-gfu" secondAttribute="trailing" id="SVa-3R-f1x"/>
                             <constraint firstAttribute="trailingMargin" secondItem="e5W-qD-hdu" secondAttribute="trailing" id="aqm-vI-CUT"/>
                             <constraint firstItem="e5W-qD-hdu" firstAttribute="leading" secondItem="iW0-HF-Lc2" secondAttribute="leadingMargin" id="glc-AZ-fol"/>
                             <constraint firstAttribute="trailingMargin" secondItem="BDg-Fc-BFM" secondAttribute="trailing" id="hSo-Vc-Qm0"/>
-                            <constraint firstItem="BDg-Fc-BFM" firstAttribute="top" secondItem="e5W-qD-hdu" secondAttribute="bottom" constant="16" id="wGR-F9-lT8"/>
+                            <constraint firstItem="dqK-VO-gfu" firstAttribute="top" secondItem="e5W-qD-hdu" secondAttribute="bottom" constant="8" id="hzL-Oz-IQh"/>
                         </constraints>
                     </view>
                     <connections>
@@ -533,6 +542,7 @@
                         <outlet property="celularTextField" destination="Aie-IM-SmQ" id="EF5-lR-x6E"/>
                         <outlet property="complementoTextField" destination="2HM-bC-ean" id="PJx-Cx-b73"/>
                         <outlet property="cpfTextField" destination="IUd-EL-dXR" id="pQe-Y0-whi"/>
+                        <outlet property="mapView" destination="dqK-VO-gfu" id="6zr-pI-9ty"/>
                         <outlet property="nomeTextField" destination="CdF-ZD-WTP" id="bgA-R2-Svh"/>
                         <outlet property="numeroTextField" destination="Zua-jy-EpR" id="we6-zU-XHI"/>
                         <outlet property="rgTextField" destination="qds-qH-nB9" id="CdO-HW-Yw5"/>

@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import MapKit
 
-class InformacaoPessoalViewController: UIViewController {
+class InformacaoPessoalViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet weak var nomeTextField: UITextField!
     
@@ -25,6 +26,13 @@ class InformacaoPessoalViewController: UIViewController {
     @IBOutlet weak var cpfTextField: UITextField!
     
     @IBOutlet weak var complementoTextField: UITextField!
+    
+    @IBOutlet weak var mapView: MKMapView!
+    
+    var locationManager = CLLocationManager()
+    var userLocation = CLLocation()
+    let regionRadius: CLLocationDistance = 1000
+    
     
     var numeroInt16: Int16 {
         if let text = numeroTextField.text {
@@ -71,15 +79,38 @@ class InformacaoPessoalViewController: UIViewController {
             print("Deu merda")
         }
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        mapView.showsUserLocation = true
+        setupLocationManager()
+    }
+    
+    func setupLocationManager(){
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+    }
+    func centerMapOnLocation(location: CLLocation) {
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius * 2.0, regionRadius * 2.0)
+        mapView.setRegion(coordinateRegion, animated: true)
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if locations.count > 0 {
+            if let location = locations.last {
+                userLocation = location
+                
+                centerMapOnLocation(location: userLocation)
+                print("A localizacao atual eh: \(userLocation.coordinate)")
+            }
+        }
+    }
+
 }

@@ -9,10 +9,12 @@
 import UIKit
 
 class RecibosTableViewController: UITableViewController {
+    
+    var recibos = [Recibo]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        recibos = ReciboDAO.getRecibos()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -20,6 +22,11 @@ class RecibosTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.recibos = ReciboDAO.getRecibos()
+        self.tableView.reloadData()
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -29,23 +36,27 @@ class RecibosTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return recibos.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reciboIdentifier", for: indexPath)
+        
+        if let reciboslCell = cell as? RecibosTableViewCell {
+            let recibo = self.recibos[indexPath.row]
+            reciboslCell.recibo = recibo
+            reciboslCell.reciboTextView.text = recibo.recibo
+        
+        }
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

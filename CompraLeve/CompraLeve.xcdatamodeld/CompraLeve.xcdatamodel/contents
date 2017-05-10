@@ -10,7 +10,7 @@
         <attribute name="rg" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="rua" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="Recibo" representedClassName="Recibo" syncable="YES">
+    <entity name="Recibo" representedClassName=".Recibo" syncable="YES">
         <attribute name="recibo" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>

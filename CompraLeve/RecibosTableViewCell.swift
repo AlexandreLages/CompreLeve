@@ -9,7 +9,11 @@
 import UIKit
 
 class RecibosTableViewCell: UITableViewCell {
+    
+    var recibo: Recibo? = nil
 
+    @IBOutlet weak var reciboTextView: UITextView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

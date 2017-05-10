@@ -2,7 +2,7 @@
 //  Recibo+CoreDataProperties.swift
 //  CompraLeve
 //
-//  Created by Student on 5/8/17.
+//  Created by Student on 5/10/17.
 //  Copyright © 2017 Wolves. All rights reserved.
 //
 
@@ -17,4 +17,5 @@ extension Recibo {
     }
 
     @NSManaged public var recibo: String?
+
 }

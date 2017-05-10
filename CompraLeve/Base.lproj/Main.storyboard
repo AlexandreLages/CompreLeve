@@ -18,9 +18,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <pickerView key="tableHeaderView" contentMode="scaleToFill" id="Bhl-fJ-Txf">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                        </pickerView>
+                        <activityIndicatorView key="tableFooterView" hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" id="n7Y-Wh-mEp">
+                            <rect key="frame" x="0.0" y="116" width="375" height="20"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </activityIndicatorView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="produtoCell" id="0lK-9e-ZnJ" customClass="ListaProdutosTableViewCell" customModule="CompraLeve" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0lK-9e-ZnJ" id="j7b-7u-WRm">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
@@ -75,6 +83,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="loadingView" destination="n7Y-Wh-mEp" id="y7x-3N-7IC"/>
+                        <outlet property="secoesPickerView" destination="Bhl-fJ-Txf" id="uI5-3w-OIH"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QpJ-r9-tyQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

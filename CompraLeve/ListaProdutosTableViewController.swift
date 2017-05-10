@@ -14,9 +14,13 @@ class ListaProdutosTableViewController: UITableViewController {
     var produtos = [Produto]()
     static var itens = [Item]()
     
+    @IBOutlet weak var loadingView: UIActivityIndicatorView!
+    
+    @IBOutlet weak var secoesPickerView: UIPickerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.loadingView.startAnimating()
         let ref = FIRDatabase.database().reference(withPath: "produtos")
         ref.observe(.value, with: { snapshot in
             // 2
@@ -31,6 +35,9 @@ class ListaProdutosTableViewController: UITableViewController {
             
             // 5
             self.produtos = newProducts
+            if(self.produtos.count > 0){
+                self.loadingView.stopAnimating()
+            }
             self.tableView.reloadData()
         })
         

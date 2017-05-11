@@ -57,7 +57,18 @@ class RecibosTableViewController: UITableViewController {
         }
         return cell
     }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToReciboView"{
+            if let nextView = segue.destination as? ReciboViewController {
+                if let reciboTouched = sender as? RecibosTableViewCell {
+                    nextView.recibo = reciboTouched.recibo!
+                }
+            }
+        }
+        
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
 
     /*
     // Override to support conditional editing of the table view.

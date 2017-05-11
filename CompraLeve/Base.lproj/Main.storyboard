@@ -710,6 +710,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="tituloLabel" destination="GNJ-fB-ggy" id="bk2-U7-W9Z"/>
+                                    <segue destination="NJn-hx-L8u" kind="show" identifier="goToReciboView" id="ezG-9M-5a2"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -724,10 +725,10 @@
             </objects>
             <point key="canvasLocation" x="1516" y="-223.53823088455775"/>
         </scene>
-        <!--View Controller-->
+        <!--Recibo View Controller-->
         <scene sceneID="1BX-tw-MU7">
             <objects>
-                <viewController id="NJn-hx-L8u" sceneMemberID="viewController">
+                <viewController id="NJn-hx-L8u" customClass="ReciboViewController" customModule="CompraLeve" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oSk-pX-IM1"/>
                         <viewControllerLayoutGuide type="bottom" id="ZxB-OX-Sna"/>
@@ -736,16 +737,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTW-3w-pEO">
-                                <rect key="frame" x="16" y="20" width="343" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titulo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTW-3w-pEO">
+                                <rect key="frame" x="16" y="74" width="343" height="32.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="A3q-3v-eav">
-                                <rect key="frame" x="16" y="74" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="A3q-3v-eav">
+                                <rect key="frame" x="16" y="122.5" width="343" height="495.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -753,7 +752,20 @@
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="A3q-3v-eav" secondAttribute="trailing" id="62r-B8-TPN"/>
+                            <constraint firstItem="KTW-3w-pEO" firstAttribute="trailing" secondItem="EYq-Gh-Msa" secondAttribute="trailingMargin" id="8Dq-bd-Z0o"/>
+                            <constraint firstItem="KTW-3w-pEO" firstAttribute="top" secondItem="oSk-pX-IM1" secondAttribute="bottom" constant="10" id="BpF-Hr-yVf"/>
+                            <constraint firstItem="A3q-3v-eav" firstAttribute="leading" secondItem="EYq-Gh-Msa" secondAttribute="leadingMargin" id="DHr-J0-QU3"/>
+                            <constraint firstItem="KTW-3w-pEO" firstAttribute="leading" secondItem="EYq-Gh-Msa" secondAttribute="leadingMargin" id="Grq-aY-oYo"/>
+                            <constraint firstItem="ZxB-OX-Sna" firstAttribute="top" secondItem="A3q-3v-eav" secondAttribute="bottom" id="Isc-Sp-EBx"/>
+                            <constraint firstItem="A3q-3v-eav" firstAttribute="top" secondItem="KTW-3w-pEO" secondAttribute="bottom" constant="16" id="zAU-ml-XRc"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="contentLabel" destination="A3q-3v-eav" id="RRg-XG-NHF"/>
+                        <outlet property="tituloLabel" destination="KTW-3w-pEO" id="h3i-Ph-pRY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bU1-X4-Mkc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -777,11 +789,11 @@
             </objects>
             <point key="canvasLocation" x="-492" y="-558"/>
         </scene>
-        <!--Lista de Produtos-->
+        <!--Navigation Controller-->
         <scene sceneID="wOG-kE-gjs">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BSq-Kf-Dzh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Lista de Produtos" id="yS1-DL-W5h"/>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="yS1-DL-W5h"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rI4-H6-RDm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -796,11 +808,11 @@
             </objects>
             <point key="canvasLocation" x="573.60000000000002" y="-893.70314842578716"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="3a9-jf-Twq">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2h3-tf-rcV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Wha-Lb-498"/>
+                    <tabBarItem key="tabBarItem" systemItem="history" id="Wha-Lb-498"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="u69-rN-3Uq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

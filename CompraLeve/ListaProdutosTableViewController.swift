@@ -22,13 +22,14 @@ class ListaProdutosTableViewController: UITableViewController {
 
     @IBOutlet weak var loadingView: UIActivityIndicatorView!
     @IBAction func secaoButtonTouched(_ sender: Any) {
-        ActionSheetStringPicker.show(withTitle: "Categorias", rows: self.categorias, initialSelection: 0, doneBlock: {
+        ActionSheetStringPicker.show(withTitle: "Categorias", rows: self.categorias, initialSelection: filtroCategorias, doneBlock: {
                 picker, indexes, values in
                 
                 print("values = \(values)")
                 print("indexes = \(indexes)")
                 self.filtroCategorias = indexes
                 self.filtrarProdutos()
+                self.secaoButton.setTitle(values as! String?, for: .normal)
                 print("picker = \(picker)")
                 return
         }, cancel: { ActionMultipleStringCancelBlock in return }, origin: sender)
@@ -117,7 +118,19 @@ class ListaProdutosTableViewController: UITableViewController {
                 }
             }
             produtoCell.nomeLabel.text = produto.nome
-            produtoCell.precoLabel.text = String(produto.preco)
+            produtoCell.precoLabel.text = "R$ "+String(produto.preco)
+            let urlString = produto.imgUrl
+            if let url = URL(string: urlString) {
+                let request = URLRequest(url: url)
+                
+                let task = URLSession.shared.dataTask(with: request, completionHandler: { (data, response, error) in
+                    if let responseData = data {
+                        produtoCell.imgView.image = UIImage(data: responseData)
+                    }
+                    
+                })
+                task.resume()
+            }
             produtoCell.produto = produto
             
         }

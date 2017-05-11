@@ -16,15 +16,17 @@ public class Produto {
     let categoria: Int
     let unidadeDeMedida:Int
     let descricao:String
+    let imgUrl:String
     let key: String
     let ref: FIRDatabaseReference?
     
-    init(nome: String, preco:Double, categoria:Int, unidadeDeMedida:Int, descricao:String, key: String = "") {
+    init(nome: String, preco:Double, categoria:Int, unidadeDeMedida:Int, descricao:String, imgUrl:String, key: String = "") {
         self.nome = nome
         self.preco = preco
         self.categoria = categoria
         self.unidadeDeMedida = unidadeDeMedida
         self.descricao = descricao
+        self.imgUrl = imgUrl
         self.key = key
         self.ref = nil
     }
@@ -37,6 +39,7 @@ public class Produto {
         categoria = snapshotValue["categoria"] as! Int
         unidadeDeMedida = snapshotValue["unidadeDeMedida"] as! Int
         descricao = snapshotValue["descricao"] as! String
+        imgUrl = snapshotValue["imgUrl"] as! String
         ref = snapshot.ref
     }
 }

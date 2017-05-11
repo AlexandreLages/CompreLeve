@@ -17,5 +17,10 @@ extension Recibo {
     }
 
     @NSManaged public var recibo: String?
-
+    
+    func toAnyObject() -> Any {
+        return [
+            "recibo": recibo
+        ]
+    }
 }

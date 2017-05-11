@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 class FinalizarCompraViewController: UIViewController {
     
@@ -18,6 +20,8 @@ class FinalizarCompraViewController: UIViewController {
     @IBAction func finalizarCompraButton() {
         let recibo = Recibo()
         recibo.recibo = string
+        let comprasRef = FIRDatabase.database().reference(withPath: "compras")
+        comprasRef.childByAutoId().setValue(recibo.toAnyObject())
         if ReciboDAO.insert(recibo: recibo) {
             print("Recibo salvo com sucesso")
         } else {

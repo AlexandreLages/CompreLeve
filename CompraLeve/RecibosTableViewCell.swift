@@ -12,7 +12,7 @@ class RecibosTableViewCell: UITableViewCell {
     
     var recibo: Recibo? = nil
 
-    @IBOutlet weak var reciboTextView: UITextView!
+    @IBOutlet weak var tituloLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

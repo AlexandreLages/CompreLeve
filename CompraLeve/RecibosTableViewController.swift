@@ -52,7 +52,7 @@ class RecibosTableViewController: UITableViewController {
         if let reciboslCell = cell as? RecibosTableViewCell {
             let recibo = self.recibos[indexPath.row]
             reciboslCell.recibo = recibo
-            reciboslCell.reciboTextView.text = recibo.recibo
+            reciboslCell.tituloLabel.text = recibo.titulo
         
         }
         return cell

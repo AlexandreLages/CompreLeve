@@ -587,7 +587,7 @@
                                 <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="0.77467672413793098" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="15"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Adicionar"/>
                                 <connections>
                                     <action selector="addButton" destination="0jl-cS-7TQ" eventType="touchUpInside" id="G9b-rG-Lta"/>
                                 </connections>
@@ -683,35 +683,33 @@
         <scene sceneID="4oR-tS-fwu">
             <objects>
                 <tableViewController id="XdI-B8-ybD" customClass="RecibosTableViewController" customModule="CompraLeve" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="238" sectionHeaderHeight="28" sectionFooterHeight="28" id="gil-EZ-2h8">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="53" sectionHeaderHeight="28" sectionFooterHeight="28" id="gil-EZ-2h8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reciboIdentifier" rowHeight="238" id="u93-Ug-028" customClass="RecibosTableViewCell" customModule="CompraLeve" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="238"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reciboIdentifier" rowHeight="53" id="u93-Ug-028" customClass="RecibosTableViewCell" customModule="CompraLeve" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="53"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="u93-Ug-028" id="Z9X-su-yhP">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="237.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="52"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2j2-MF-Xxx">
-                                            <rect key="frame" x="16" y="8" width="343" height="221"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        </textView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recibo titulo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GNJ-fB-ggy">
+                                            <rect key="frame" x="8" y="8" width="359" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="2j2-MF-Xxx" firstAttribute="leading" secondItem="Z9X-su-yhP" secondAttribute="leadingMargin" constant="8" id="LT9-Ge-2AP"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="2j2-MF-Xxx" secondAttribute="trailing" constant="8" id="U7f-Ao-3hK"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="2j2-MF-Xxx" secondAttribute="bottom" constant="0.5" id="XLv-Q4-vs8"/>
-                                        <constraint firstItem="2j2-MF-Xxx" firstAttribute="top" secondItem="Z9X-su-yhP" secondAttribute="topMargin" id="y36-mQ-fKD"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="GNJ-fB-ggy" secondAttribute="trailing" id="SLX-GO-vdj"/>
+                                        <constraint firstItem="GNJ-fB-ggy" firstAttribute="top" secondItem="Z9X-su-yhP" secondAttribute="topMargin" id="dk2-1L-O6l"/>
+                                        <constraint firstItem="GNJ-fB-ggy" firstAttribute="leading" secondItem="Z9X-su-yhP" secondAttribute="leadingMargin" id="mwG-W9-Sgr"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="reciboTextView" destination="2j2-MF-Xxx" id="eVK-Cg-Pag"/>
+                                    <outlet property="tituloLabel" destination="GNJ-fB-ggy" id="bk2-U7-W9Z"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -725,6 +723,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xYn-Yb-aa8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1516" y="-223.53823088455775"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="1BX-tw-MU7">
+            <objects>
+                <viewController id="NJn-hx-L8u" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oSk-pX-IM1"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZxB-OX-Sna"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EYq-Gh-Msa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTW-3w-pEO">
+                                <rect key="frame" x="16" y="20" width="343" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="A3q-3v-eav">
+                                <rect key="frame" x="16" y="74" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bU1-X4-Mkc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2320.8000000000002" y="-221.73913043478262"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="6wG-Nm-X8Q">

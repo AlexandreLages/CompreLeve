@@ -19,6 +19,11 @@ class FinalizarCompraViewController: UIViewController {
     
     @IBAction func finalizarCompraButton() {
         let recibo = Recibo()
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd.MM.yyyy"
+        let result = formatter.string(from: date)
+        recibo.titulo = "Recibo "+result
         recibo.recibo = string
         let comprasRef = FIRDatabase.database().reference(withPath: "compras")
         comprasRef.childByAutoId().setValue(recibo.toAnyObject())

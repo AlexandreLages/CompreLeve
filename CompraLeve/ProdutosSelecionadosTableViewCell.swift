@@ -12,6 +12,7 @@ class ProdutosSelecionadosTableViewCell: UITableViewCell {
 
     @IBOutlet weak var nomeProdutoLabel: UILabel!
     @IBOutlet weak var quantidadeLabel: UILabel!
+    @IBOutlet weak var precoTotalLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

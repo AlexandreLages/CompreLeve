@@ -50,6 +50,7 @@ class ProdutosSelecionadoTableViewController: UITableViewController {
         if let itemCell = cell as? ProdutosSelecionadosTableViewCell {
             itemCell.nomeProdutoLabel.text = item.produto.nome
             itemCell.quantidadeLabel.text = String(item.quantidade)
+            itemCell.precoTotalLabel.text = "R$ "+String(Double(item.quantidade)*item.produto.preco)
         }
         
         

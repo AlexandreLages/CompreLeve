@@ -119,18 +119,29 @@ class ListaProdutosTableViewController: UITableViewController {
             }
             produtoCell.nomeLabel.text = produto.nome
             produtoCell.precoLabel.text = "R$ "+String(produto.preco)
-            let urlString = produto.imgUrl
-            if let url = URL(string: urlString) {
-                let request = URLRequest(url: url)
+            
+            if let _ = produto.image {
+                produtoCell.imgView.image = produto.image
+            } else {
                 
-                let task = URLSession.shared.dataTask(with: request, completionHandler: { (data, response, error) in
-                    if let responseData = data {
-                        produtoCell.imgView.image = UIImage(data: responseData)
-                    }
+                produtoCell.imgView.image = UIImage(named: "img-placeholder")
+                
+                let urlString = produto.imgUrl
+                if let url = URL(string: urlString) {
+                    let request = URLRequest(url: url)
                     
-                })
-                task.resume()
+                    let task = URLSession.shared.dataTask(with: request, completionHandler: { (data, response, error) in
+                        if let responseData = data {
+                            produto.image = UIImage(data: responseData)
+                            
+                            tableView.reloadData()
+                        }
+                        
+                    })
+                    task.resume()
+                }
             }
+            
             produtoCell.produto = produto
             
         }

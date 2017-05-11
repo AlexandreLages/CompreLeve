@@ -135,36 +135,50 @@
         <scene sceneID="nH6-zQ-YUo">
             <objects>
                 <tableViewController id="VPG-cv-NKa" customClass="ProdutosSelecionadoTableViewController" customModule="CompraLeve" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ed5-Gg-A7r">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="88" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ed5-Gg-A7r">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemCell" id="azm-Bi-890" customClass="ProdutosSelecionadosTableViewCell" customModule="CompraLeve" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemCell" rowHeight="88" id="azm-Bi-890" customClass="ProdutosSelecionadosTableViewCell" customModule="CompraLeve" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="88"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="azm-Bi-890" id="Z19-61-0ik">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="87"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wfK-vW-tjz">
-                                            <rect key="frame" x="8" y="11" width="42" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wfK-vW-tjz">
+                                            <rect key="frame" x="8" y="8" width="359" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BxW-Ed-34K">
-                                            <rect key="frame" x="276" y="11" width="42" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JKM-Vn-9Do">
+                                            <rect key="frame" x="329" y="37" width="38" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qnt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BxW-Ed-34K">
+                                            <rect key="frame" x="249" y="37" width="29" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="wfK-vW-tjz" firstAttribute="top" secondItem="Z19-61-0ik" secondAttribute="topMargin" id="45x-ae-H0P"/>
+                                        <constraint firstItem="BxW-Ed-34K" firstAttribute="top" secondItem="wfK-vW-tjz" secondAttribute="bottom" constant="8" id="Rvj-mh-uD7"/>
+                                        <constraint firstItem="JKM-Vn-9Do" firstAttribute="top" secondItem="wfK-vW-tjz" secondAttribute="bottom" constant="8" id="a6h-Nf-KCg"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="JKM-Vn-9Do" secondAttribute="trailing" id="gqV-wY-yJl"/>
+                                        <constraint firstItem="wfK-vW-tjz" firstAttribute="leading" secondItem="Z19-61-0ik" secondAttribute="leadingMargin" id="s1t-cm-46H"/>
+                                        <constraint firstItem="BxW-Ed-34K" firstAttribute="leading" secondItem="Z19-61-0ik" secondAttribute="leadingMargin" constant="241" id="sB1-JX-m13"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="wfK-vW-tjz" secondAttribute="trailing" id="tF1-sn-sxH"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="nomeProdutoLabel" destination="wfK-vW-tjz" id="U2a-EI-yaa"/>
+                                    <outlet property="precoTotalLabel" destination="JKM-Vn-9Do" id="h40-Xp-tsb"/>
                                     <outlet property="quantidadeLabel" destination="BxW-Ed-34K" id="xV4-xJ-40N"/>
                                 </connections>
                             </tableViewCell>

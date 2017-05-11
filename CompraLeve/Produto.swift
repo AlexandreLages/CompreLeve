@@ -20,6 +20,8 @@ public class Produto {
     let key: String
     let ref: FIRDatabaseReference?
     
+    var image: UIImage?
+    
     init(nome: String, preco:Double, categoria:Int, unidadeDeMedida:Int, descricao:String, imgUrl:String, key: String = "") {
         self.nome = nome
         self.preco = preco

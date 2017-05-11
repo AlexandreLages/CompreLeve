@@ -197,6 +197,7 @@
 				TargetAttributes = {
 					3F4E80771EC08EAD002C2D04 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = K6TAGN2E7Z;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -432,6 +433,7 @@
 			baseConfigurationReference = 26267CBEC3A618A300FCD01B /* Pods-CompraLeve.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = K6TAGN2E7Z;
 				INFOPLIST_FILE = CompraLeve/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -449,6 +451,7 @@
 			baseConfigurationReference = D03C46BE1067F4F691773027 /* Pods-CompraLeve.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = K6TAGN2E7Z;
 				INFOPLIST_FILE = CompraLeve/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (

@@ -14,7 +14,7 @@ class RecibosTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        recibos = ReciboDAO.getRecibos()
+        // recibos = ReciboDAO.getRecibos()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -25,6 +25,7 @@ class RecibosTableViewController: UITableViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.recibos = ReciboDAO.getRecibos()
+        print(self.recibos)
         self.tableView.reloadData()
     }
     override func didReceiveMemoryWarning() {

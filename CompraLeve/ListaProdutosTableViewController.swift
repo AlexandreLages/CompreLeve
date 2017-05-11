@@ -13,17 +13,22 @@ import ActionSheetPicker_3_0
 
 class ListaProdutosTableViewController: UITableViewController {
     var produtos = [Produto]()
+    var produtosFiltrados = [Produto]()
     static var itens = [Item]()
+    var categorias = [String]()
+    var filtroCategorias = 0
     
     @IBOutlet weak var secaoButton: UIButton!
 
     @IBOutlet weak var loadingView: UIActivityIndicatorView!
     @IBAction func secaoButtonTouched(_ sender: Any) {
-        ActionSheetStringPicker.show(withTitle: "Multiple String Picker", rows: ["Todos", "Limpeza", "Descartaveis"], initialSelection: 0, doneBlock: {
+        ActionSheetStringPicker.show(withTitle: "Categorias", rows: self.categorias, initialSelection: 0, doneBlock: {
                 picker, indexes, values in
                 
                 print("values = \(values)")
                 print("indexes = \(indexes)")
+                self.filtroCategorias = indexes
+                self.filtrarProdutos()
                 print("picker = \(picker)")
                 return
         }, cancel: { ActionMultipleStringCancelBlock in return }, origin: sender)
@@ -34,17 +39,11 @@ class ListaProdutosTableViewController: UITableViewController {
         
         let ref = FIRDatabase.database().reference(withPath: "produtos")
         ref.observe(.value, with: { snapshot in
-            // 2
             var newProducts: [Produto] = []
-            
-            // 3
             for item in snapshot.children {
-                // 4
                 let productItem = Produto(snapshot: item as! FIRDataSnapshot)
                 newProducts.append(productItem)
             }
-            
-            // 5
             self.produtos = newProducts
             if(self.produtos.count > 0){
                 self.loadingView.stopAnimating()
@@ -52,7 +51,16 @@ class ListaProdutosTableViewController: UITableViewController {
             print("RECARREGANDO")
             self.tableView.reloadData()
         })
-        
+        let refCat = FIRDatabase.database().reference(withPath: "categorias")
+        refCat.observe(.value, with: { snapshot in
+            var novasCategorias: [String] = []
+            for cat in snapshot.children {
+                novasCategorias.append((cat as AnyObject).value)
+            }
+            self.categorias = novasCategorias
+            print("RECARREGANDO CATEGORIAS")
+            self.tableView.reloadData()
+        })
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -81,6 +89,9 @@ class ListaProdutosTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+        if filtroCategorias != 0 {
+            return self.produtosFiltrados.count
+        }
         return self.produtos.count
     }
 
@@ -88,8 +99,11 @@ class ListaProdutosTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "produtoCell", for: indexPath)
 
         let produto: Produto
-        produto = produtos[indexPath.row]
-        
+        if filtroCategorias != 0 {
+            produto = produtosFiltrados[indexPath.row]
+        } else {
+            produto = produtos[indexPath.row]
+        }
         if let produtoCell = cell as? ListaProdutosTableViewCell {
             
             produtoCell.qntLabel.text = String(0)
@@ -112,7 +126,13 @@ class ListaProdutosTableViewController: UITableViewController {
         return cell
     }
     
-
+    func filtrarProdutos() {
+        produtosFiltrados = self.produtos.filter { produto in
+            return produto.categoria == filtroCategorias
+        }
+        tableView.reloadData()
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

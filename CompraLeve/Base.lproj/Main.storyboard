@@ -139,6 +139,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vcO-lf-5yW">
+                            <rect key="frame" x="0.0" y="116" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemCell" rowHeight="88" id="azm-Bi-890" customClass="ProdutosSelecionadosTableViewCell" customModule="CompraLeve" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="88"/>
@@ -195,6 +202,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="precoTotalLabel" destination="vcO-lf-5yW" id="uUb-q5-21i"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CbG-Qi-zbg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -618,7 +628,7 @@
             </objects>
             <point key="canvasLocation" x="3989" y="-1567"/>
         </scene>
-        <!--Title-->
+        <!--Finalizar Compra-->
         <scene sceneID="T1k-nk-iz9">
             <objects>
                 <viewController id="zIk-70-AzY" customClass="FinalizarCompraViewController" customModule="CompraLeve" customModuleProvider="target" sceneMemberID="viewController">
@@ -630,9 +640,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vcl-Kn-jca">
-                                <rect key="frame" x="16" y="523" width="194" height="87"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vcl-Kn-jca">
+                                <rect key="frame" x="16" y="565" width="343" height="42"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Comprar">
@@ -643,25 +652,25 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zLc-fQ-UoW">
-                                <rect key="frame" x="16" y="72" width="343" height="404"/>
+                                <rect key="frame" x="16" y="72" width="343" height="477"/>
                                 <color key="backgroundColor" red="0.98930612847261712" green="1" blue="0.48745264767229901" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="404" id="BIG-N0-eUi"/>
-                                    <constraint firstAttribute="width" constant="343" id="h3b-vq-CYo"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="zLc-fQ-UoW" firstAttribute="leading" secondItem="zp1-Nu-9yz" secondAttribute="leadingMargin" id="6hl-mL-3xV"/>
-                            <constraint firstItem="zLc-fQ-UoW" firstAttribute="top" secondItem="zzT-uG-gik" secondAttribute="bottom" constant="8" id="CDB-rX-kw0"/>
-                            <constraint firstItem="zLc-fQ-UoW" firstAttribute="trailing" secondItem="zp1-Nu-9yz" secondAttribute="trailingMargin" id="yQk-V2-Bdz"/>
+                            <constraint firstItem="vcl-Kn-jca" firstAttribute="leading" secondItem="zp1-Nu-9yz" secondAttribute="leadingMargin" id="7eP-fo-P0T"/>
+                            <constraint firstItem="zLc-fQ-UoW" firstAttribute="leading" secondItem="zp1-Nu-9yz" secondAttribute="leadingMargin" id="7ee-z9-YCy"/>
+                            <constraint firstItem="zLc-fQ-UoW" firstAttribute="top" secondItem="zzT-uG-gik" secondAttribute="bottom" constant="8" id="FOt-h3-Nmt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vcl-Kn-jca" secondAttribute="trailing" id="O3x-ae-Rf9"/>
+                            <constraint firstItem="vcl-Kn-jca" firstAttribute="top" secondItem="zLc-fQ-UoW" secondAttribute="bottom" constant="16" id="VyA-1r-Y0F"/>
+                            <constraint firstItem="Pt4-Xi-Y8M" firstAttribute="top" secondItem="vcl-Kn-jca" secondAttribute="bottom" constant="16" id="xxc-wz-RW4"/>
+                            <constraint firstItem="zLc-fQ-UoW" firstAttribute="trailing" secondItem="zp1-Nu-9yz" secondAttribute="trailingMargin" id="yKY-jT-f6r"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="rIa-wp-kIf"/>
+                    <navigationItem key="navigationItem" title="Finalizar Compra" id="rIa-wp-kIf"/>
                     <connections>
                         <outlet property="reciboTextView" destination="zLc-fQ-UoW" id="9vn-yW-8zk"/>
                     </connections>

@@ -13,9 +13,11 @@ class ProdutosSelecionadoTableViewController: UITableViewController {
     
     var itens = [Item]()
 
+    @IBOutlet weak var precoTotalLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.itens = ListaProdutosTableViewController.itens
+        precoTotalLabel.text = "Total: R$ "+calculaTotal()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -55,6 +57,14 @@ class ProdutosSelecionadoTableViewController: UITableViewController {
         
         
         return cell
+    }
+    
+    func calculaTotal() -> String{
+        var total = 0.0
+        for item in ListaProdutosTableViewController.itens {
+            total+=Double(item.quantidade)*item.produto.preco
+        }
+        return String(total)
     }
 
     /*

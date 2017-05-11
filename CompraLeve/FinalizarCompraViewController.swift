@@ -29,38 +29,44 @@ class FinalizarCompraViewController: UIViewController {
         }
         ListaProdutosTableViewController.itens.removeAll()
         //self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+        //self.navigationController?.popToRootViewController(animated: true)
+        //let alert = UIAlertController(title: "Aviso", message: "Sua compra foi realizada! Aguarde a entrega.", preferredStyle: UIAlertControllerStyle.alert)
+        //alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+        //self.present(alert, animated: true, completion: nil)
+        
+        let alert = UIAlertController(title: "Aviso", message: "Sua compra foi realizada com sucesso!", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: alertHandler))
+        self.present(alert, animated: true, completion: nil)
+    }
+    func alertHandler(action:UIAlertAction) {
         self.navigationController?.popToRootViewController(animated: true)
-        
-        
     }
     
     func transformarEmString(){
         var totalDoTotal: Double = 0
         
-        string += "-------------COMPRA LEVE--------------\n"
+        string += "Nome: "+(informacoesPessoais?.nome!)!
         string += "\n"
-        string += (informacoesPessoais?.nome)!
+        string += "CPF: "+(informacoesPessoais?.cpf!)!
         string += "\n"
-        string += (informacoesPessoais?.cpf)!
+        string += "Rg: "+(informacoesPessoais?.rg!)!
         string += "\n"
-        string += (informacoesPessoais?.rg)!
+        string += "Celular: "+(informacoesPessoais?.celular!)!
         string += "\n"
-        string += (informacoesPessoais?.celular)!
+        string += "Rua: "+(informacoesPessoais?.rua!)!
         string += "\n"
-        string += (informacoesPessoais?.rua)!
+        string += "Bairro: "+String((informacoesPessoais?.bairro)!)
         string += "\n"
-        string += String((informacoesPessoais?.bairro)!)
-        string += "\n"
-        string += String((informacoesPessoais?.numero)!)
-        string += "\n"
+        string += "Numero: "+String((informacoesPessoais?.numero)!)
+        string += "\n\n"
         for i in ListaProdutosTableViewController.itens{
             let total = i.produto.preco * Double(i.quantidade)
-            string+="\(i.produto.nome) qtd \(i.quantidade) preco unt R$ = \(i.produto.preco) total R$ = \(total)\n"
+            string+="\n\(i.produto.nome) \nQtd: \(i.quantidade) \tPreco uni: R$ = \(i.produto.preco) \nTotal R$ = \(total)\n"
             totalDoTotal += total
         }
         
         
-        string += "TOTAL: \(totalDoTotal)\n"
+        string += "\nTOTAL: \(totalDoTotal)\n"
         reciboTextView.text = string
     }
     

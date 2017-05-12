@@ -8,6 +8,9 @@
 
 import UIKit
 import MapKit
+import ActionSheetPicker_3_0
+import Firebase
+import FirebaseDatabase
 
 class InformacaoPessoalViewController: UIViewController, CLLocationManagerDelegate {
 
@@ -25,9 +28,26 @@ class InformacaoPessoalViewController: UIViewController, CLLocationManagerDelega
     
     @IBOutlet weak var cpfTextField: UITextField!
     
+    @IBOutlet weak var bairroButton: UIButton!
     @IBOutlet weak var complementoTextField: UITextField!
     
     @IBOutlet weak var mapView: MKMapView!
+    
+    var bairros = [Bairro]()
+    var bairrosString = [String]()
+    var bairroSelecionado = 0
+    
+    @IBAction func bairroTouched(_ sender: Any) {
+        ActionSheetStringPicker.show(withTitle: "Bairro", rows: self.bairrosString, initialSelection: 0, doneBlock: {
+            picker, indexes, values in
+            
+            print("values = \(values)")
+            print("indexes = \(indexes)")
+            self.bairroSelecionado = indexes
+            self.bairroButton.setTitle(values as! String, for: .normal)
+            print("picker = \(picker)")
+            return
+        }, cancel: { ActionMultipleStringCancelBlock in return }, origin: sender)    }
     
     var locationManager = CLLocationManager()
     var userLocation = CLLocation()
@@ -56,7 +76,7 @@ class InformacaoPessoalViewController: UIViewController, CLLocationManagerDelega
         let nome = nomeTextField.text
         let celular = celularTextField.text
         let rua = ruaTextField.text
-        let bairro = bairroInt16
+        let bairro = Int16(self.bairroSelecionado)
         let numero = numeroInt16
         let rg = rgTextField.text
         let cpf = cpfTextField.text
@@ -87,6 +107,17 @@ class InformacaoPessoalViewController: UIViewController, CLLocationManagerDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let ref = FIRDatabase.database().reference(withPath: "bairros")
+        ref.observe(.value, with: { snapshot in
+            var novosBairros: [Bairro] = []
+            for item in snapshot.children {
+                let bairroItem = Bairro(snapshot: item as! FIRDataSnapshot)
+                novosBairros.append(bairroItem)
+            }
+            self.bairros = novosBairros
+            self.bairrosString = self.getBairrosStringArray()
+            print("RECARREGANDO")
+        })
         mapView.showsUserLocation = true
         setupLocationManager()
     }
@@ -116,5 +147,12 @@ class InformacaoPessoalViewController: UIViewController, CLLocationManagerDelega
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         // Chamamos a view para forçar que a edição pare
         self.view.endEditing(true)
+    }
+    func getBairrosStringArray() -> [String]{
+        var res:[String] = []
+        for b in self.bairros{
+            res.append(b.nome)
+        }
+        return res
     }
 }
